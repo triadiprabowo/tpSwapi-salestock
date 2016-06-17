@@ -1,0 +1,23 @@
+html(lang="en", ng:controller="#{app.controllerName}")
+	head
+		title #{title}
+
+		// Stylesheet
+		link(rel="stylesheet", href="/dist/assets/css/bootstrap.min.css")
+		link(rel="stylesheet", href="/dist/assets/css/main.min.css")
+
+		// Application Scripts
+		if app.controllerScript != null
+			script(type="text/javascript").
+				window.appScript = {controllers: !{JSON.stringify(app.controllerScript)}};
+
+		// Application Scripts
+		if route.path == '/character/:id'
+			script(type="text/javascript").
+				window.characterData = !{JSON.stringify(data)};
+		else if route.path == '/movies/:id'
+			script(type="text/javascript").
+				window.movieData = !{JSON.stringify(data)};
+
+		// Script Module Async Loader
+		script(src='/dist/http/app-modules.js')

@@ -1,0 +1,25 @@
+// Include document head
+include ./global/head.jade
+
+body
+	// Include header
+	include ./parts/header.jade
+
+	.outer-wrap
+		.page-wrap
+			.col-md-12
+				h2(ng:bind:html="characterData.name")
+
+				.list-inline.nomargin
+					li(ng:repeat="list in imageGalleries")
+						.gallery-block(resize:image="{{imageGalleries.length}}", style="background: url({{list.MediaUrl}}); width: {{setSize}}; height: {{setSize}};")
+
+				hr
+
+			.col-md-12
+				.list-block.table-style.has-hover-bg
+					li Name: {{characterData.name}}
+					li Birth Year: {{characterData.birth_year}}
+					li Gender: #[span.capitalize {{characterData.gender}}]
+					li Hair Color: #[span.capitalize {{characterData.hair_color}}]
+					li Eye Color: #[span.capitalize {{characterData.eye_color}}]

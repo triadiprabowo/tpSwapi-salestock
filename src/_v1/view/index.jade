@@ -1,0 +1,18 @@
+// Include document head
+include ./global/head.jade
+
+body
+	// Include Header
+	include ./parts/header.jade
+
+	.outer-wrap
+		.page-wrap
+			.block-space
+				.photo-block(ng:style="{'background': 'url('+imageResults[0].MediaUrl+')'}")
+				h3 #[a(ng:href="/character/{{selectedPeople.bio.id}}") {{selectedPeople.bio.name}}] - #[span {{selectedPeople.bio.birth_year}}]
+
+				p Seen at:
+
+				.list-block
+					li(ng:repeat="list in selectedPeople.movies")
+						a(ng:href="/movies/{{list.data.id}}", ng:bind:html="list.data.title")

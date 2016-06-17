@@ -1,0 +1,22 @@
+// Include document head
+include ./global/head.jade
+
+body
+	// Include header
+	include ./parts/header.jade
+
+	.outer-wrap
+		.page-wrap
+			.col-md-12.content
+				img(ng:src="{{movieCover}}").img-cover
+				h2(ng:bind:html="movieData.title")
+				p(ng:bind:html="movieData.opening_crawl")
+
+			.col-md-12.content
+				h2 Characters
+
+				p(ng:show="showCharacterLoading") Loading Characters List...
+
+				ul.list-block.has-hover-bg
+					li(ng:repeat="list in listCharacters")
+						a(ng:href="/character/{{list.id}}", ng:bind:html="($index+1) +'. '+list.name")

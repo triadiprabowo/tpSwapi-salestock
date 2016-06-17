@@ -1,0 +1,11 @@
+// Include document head
+include ./global/head.jade
+
+body
+	// Include header
+	include ./parts/header.jade
+
+	.outer-wrap
+		.page-wrap
+			.col-md-12
+				img(ng:src="{{movieCover}}")

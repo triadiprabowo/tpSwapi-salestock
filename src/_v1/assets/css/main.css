@@ -1,0 +1,192 @@
+/*
+** Swapi sample application styling
+** @author: Triadi Prabowo
+*/
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+}
+
+body {
+	background: #444;
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+}
+
+pre {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+a:link {
+	color: #e0e0e0;
+	text-decoration: none;
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+a:visited {
+	color: #e0e0e0;
+}
+
+a:hover {
+	color: #0082cd;
+}
+
+p {
+	white-space: pre-wrap;
+	word-break: break-word;
+	color: #eee;
+}
+
+hr {
+	margin: 10px auto;
+	border-top: none;
+	border-bottom: 1px solid #383838;
+}
+
+.align-center {
+	text-align: center !important;
+}
+
+.nomargin, .nomargin li{
+	margin: 0 !important;
+}
+
+.header {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+/*
+** Page Wrap
+*/
+.outer-wrap {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	display: block;
+}
+
+.page-wrap {
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+	background: rgba(0,0,0,0.1);
+	padding: 10px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+/*
+** Block Space
+*/
+.block-space {
+	position: relative;
+	margin: 10px auto;
+	overflow: hidden;
+}
+
+.photo-block, .gallery-block {
+	width: 200px;
+	height: 200px;
+	float: left;
+	border-radius: 5px;
+	margin-right: 1em;
+	vertical-align: top;
+	background-size: cover !important;
+	background-repeat: no-repeat;
+	background-position: top center !important;
+
+	-webkit-box-shadow: 2px 1px 2px 1px rgba(15,15,15,0.1);
+	-moz-box-shadow: 2px 1px 2px 1px rgba(15,15,15,0.1);
+	box-shadow: 2px 1px 2px 1px rgba(15,15,15,0.1);
+}
+
+.gallery-block {
+	width: 23%;
+	height: 23%;
+	margin: 0;
+}
+
+/*
+** List
+*/
+.list-inline {
+	list-style-type: none;
+}
+
+.list-inline li {
+	position: relative;
+	display: inline-block;
+	margin: 0 15px;
+	padding: 0 5px;
+}
+
+.list-block {
+	list-style-type: none;
+}
+
+.list-block li {
+	display: block;
+	color: #fff;
+	font-size: .9em;
+	margin: 0.45em auto;
+}
+
+.list-block.table-style {
+	width: 100%;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.list-block.table-style li {
+	background: #444;
+	padding: 1em .65em;
+}
+
+.list-block.table-style.has-hover-bg li {
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.list-block.table-style.has-hover-bg li:hover {
+	background: #666;
+}
+
+/* CONTENT */
+.content {
+	position: relative;
+	padding: 1em;
+	overflow: hidden;
+}
+
+.img-cover {
+	float: left;
+	margin-right: 1em;
+	vertical-align: top;
+	margin-top: 1.5em;
+}
+
+.content h2 {
+	font-size: 1.2em;
+}
+
+.content p {
+	font-size: .85em;
+}
